@@ -1,28 +1,148 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 @import "customVariables";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 
 $header:  'Vollkorn', serif;
-$black: #000;
+$oleo: 'Oleo Script', serif;
+$lato: 'lato', serif;
 $body: 'Josefin Slab', serif;
+$black: #000;
 $header-font: 20px;
 
+.hvr-underline-from-center:before  {
+  background:#FFF;
+}
 
 .navbar-brand  {
-  font-family: $body;
+  font-family: $lato;
+  font-weight:300;
+}
+
+.navbar{
+  font-family: $lato;
+  font-weight:200;
+  --webkit-transition : all 0.2s ease-in-out;
+  --o-transition : all 0.2s ease-in-out;
+  --moz-transition : all 0.2s ease-in-out;
+  --ms-transition : all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar li a  {
+  border-bottom: 6px solid transparent;
+}
+
+.navbar:hover li a{
+  color: #fff;
+}
+
+.navbar li a:hover{
+  font-weight:300;
+  color : #fff;
+
 }
 
 .intro {
   height: 100vh;
+  text-align: center;
   background: image-url("Sea.png");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 
+  h1  {
+    margin-top: 15vh;
+    font-weight:bold;
+    font-size:10vw;
+    text-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+  }
 
+  h2  {
+    font-family: $oleo;
+    text-shadow: 4px 4px 0px rgba(0.2,0,0,0.1);
+  }
+
+}
+
+.title  {
+  width:100%;
+  margin: 0 auto;
+  position:absolute;
+
+  #chevron  {
+    margin-top:5vh;
+    font-size:10vh;
+  }
+}
+
+.about  {
+  width: 100vw;
+  text-align:center;
+  background: image-url("symphony.png");
+  padding-top:5vh;
+
+  .page-header  {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .container  {
+    text-align:left;
+    font-size:2vh;
+    padding-bottom:5vh;
+
+    p  {
+      margin-bottom:0.8vh;
+    }
+  }
+
+  h1  {
+    font-family:$lato;
+    margin-bottom:2.5vh;
+    font-weight:bold;
+    font-size:5vw;
+
+    small {
+      font-family:$body;
+    }
+  }
+}
+
+.posts  {
+  width: 100vw;
+  height: 100vh;
+  padding-top:5vh;
+
+  .page-header  {
+    text-align:center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .container  {
+    text-align:left;
+    font-size:2vh;
+    padding-bottom:5vh;
+
+    p  {
+      margin-bottom:0.8vh;
+    }
+  }
+
+  h1  {
+    font-family:$lato;
+    margin-bottom:2.5vh;
+    font-weight:bold;
+    font-size:5vw;
+
+    small {
+      font-family:$body;
+    }
+  }
 }

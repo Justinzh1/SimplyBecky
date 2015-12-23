@@ -1,20 +1,52 @@
 <head>
   <%= stylesheet_link_tag "welcome", :media => "all" %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <link href='https://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,100,100italic,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
-
 </head>
 
 <body>
-  <div class="navbar navbar-default">
-      <div class="navbar-header">
-        <a class="navbar-brand">simply becky</a></a>
-      </div>
-  </div>
 
   <div class="intro">
+    <div class="container-fluid">
+      <div class="navbar navbar-default">
+          <div class="navbar-header">
+            <%= link_to("simplybecky", "#", class: "navbar-brand hvr-underline-from-center ")%>
+          </div>
+          <div class="nav navbar-nav navbar-right">
+            <li><%= link_to("blog", "#", class: "hvr-underline-from-center")%></li>
+            <li><%= link_to("about", "#", class: "hvr-underline-from-center")%></li>
+            <li><%= link_to("login", "#", class: "hvr-underline-from-center")%></li>
+
+
+          </div>
+      </div>
+    </div>
+    <div class="title">
+      <h1>Simply Becky</h1>
+      <h2>—my thoughts my blog—</h2>
+      <i id="chevron" class="fa fa-chevron-down hvr-icon-hang"></i>
+    </div>
     <canvas></canvas>
+  </div>
+
+  <div class="about">
+    <div class="page-header">
+      <h1>Who am I? <small>simply becky</small></h1>
+      <div class="container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit ipsum ut congue facilisis. Vivamus bibendum enim eget pellentesque vehicula. Nullam tincidunt erat nec viverra condimentum. Curabitur molestie at urna non rhoncus. Sed sagittis non augue sed ornare. Phasellus aliquet quis sem at lobortis. Vestibulum condimentum eget nulla vitae ornare. Donec mollis finibus eros eu tincidunt.</p>
+
+        <p>Praesent tellus augue, facilisis a sollicitudin eu, pellentesque id orci. Nunc iaculis libero ac mi congue ultrices. Vestibulum nisl quam, auctor a hendrerit eu, finibus eget augue. Aenean et venenatis ligula, porttitor viverra purus. In tristique tristique fringilla. Aenean pellentesque lacus vitae interdum tristique. Donec a mauris orci. Donec facilisis, ipsum non placerat commodo, augue purus sagittis dui, sed ornare massa lacus non ex. Suspendisse porttitor eros at tempus porta. Pellentesque porttitor leo ex, et vehicula purus iaculis a.</p>
+
+        <p>Praesent tellus augue, facilisis a sollicitudin eu, pellentesque id orci. Nunc iaculis libero ac mi congue ultrices. Vestibulum nisl quam, auctor a hendrerit eu, finibus eget augue. Aenean et venenatis ligula, porttitor viverra purus. In tristique tristique fringilla. Aenean pellentesque lacus vitae interdum tristique. Donec a mauris orci. Donec facilisis, ipsum non placerat commodo, augue purus sagittis dui, sed ornare massa lacus non ex. Suspendisse porttitor eros at tempus porta. Pellentesque porttitor leo ex, et vehicula purus iaculis a.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="posts">
+    <div class="page-header">
+      <h1>My posts</h1>
+      <div class="container">
+      </div>
+    </div>
   </div>
 
 </body>
