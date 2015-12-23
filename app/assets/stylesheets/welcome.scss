@@ -11,8 +11,9 @@ $black: #000;
 $body: 'Josefin Slab', serif;
 $header-font: 20px;
 
+
 .navbar-brand  {
-  font-family: $header;
+  font-family: $body;
 }
 
 .intro {
@@ -22,15 +23,6 @@ $header-font: 20px;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
 
-#header {
-  width:23%;
-  margin:auto;
-  margin-top:20%;
-  text-align: center;
-  border-radius: 5em;
-  .h1{
-    font-size:12px;
-  }
+
 }
