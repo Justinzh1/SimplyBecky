@@ -24,7 +24,9 @@
  * @author Acauã Montiel <contato@acauamontiel.com.br>
  * @license http://acaua.mit-license.org/
  */
- //$(document).ready(function(){
+
+
+ $(document).ready(function(){
   (function($, window) {
   	/**
   	 * Makes a nice constellation on canvas
@@ -199,13 +201,20 @@
   })($, window);
 
   // Init plugin
-  $('canvas').constellation({
-  	star: {
-  		width: 3
-  	},
-  	line: {
-  		color: 'rgba(255, 255, 255, .8)'
-  	},
-  	radius: 250
+  // $('canvas').constellation({
+  // 	star: {
+  // 		width: 3
+  // 	},
+  // 	line: {
+  // 		color: 'rgba(255, 255, 255, .8)'
+  // 	},
+  // 	radius: 250
+  // });
+
+  $("#chevron").click(function(){
+    console.log("clicked");
+    $("#about").animatescroll();
   });
+
+
 });
