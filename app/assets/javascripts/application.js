@@ -233,15 +233,22 @@
   var original = $(".col-md-4").css("width");
   var parent = $(".container").css("width");
 
-  $(".col-md-4").on({
-    mouseenter: function(){
-      $(this).find(".content").css("display","none");
-      $(this).find(".popup").css("display", "relative");
-      console.log("mouseover" + original);
-    },
-    mouseleave: function(){
-      console.log("mousseleave");
-    }
+  $(".col-md-4").click(function(){
+  
+    $(".col-md-4").css("width", original);
+    $(".col-md-4").animate("width", original);
+    $(".col-md-4").find(".popup").hide();
+    $(".col-md-4").find(".content").show();
+    $(this).find(".popup").show("slow");
+    $(this).find(".content").hide();
+    $(this).fadeIn("fast", function(){
+        $(this).css("width", parent);
+
+        $(this).animate("width", parent);
+    });
+
+
+
   });
 
 });
