@@ -140,7 +140,7 @@ h1  {
     font-family:$lato;
     margin-bottom:2.5vh;
     font-weight:bold;
-    font-size:5vw;
+    font-size:400%;
 
     small {
       font-family:$body;
@@ -192,7 +192,7 @@ h1  {
         margin-bottom:0;
 
         h2  {
-          font-size:1.4vw;
+          font-size:130%;
           margin-bottom: 0.3vh;
 
         }
@@ -200,11 +200,12 @@ h1  {
         h5  {
           font-family:$lato;
           font-weight: 300;
-          margin-bottom: 0.3vh;
+          margin-top: 1%;
+          margin-bottom: 1%;
         }
 
         p  {
-          font-size:1.3vw;
+          font-size:120%;
         }
       }
     }
@@ -230,7 +231,6 @@ h1  {
     }
   }
 }
-
 
 .popup  {
   display: none;

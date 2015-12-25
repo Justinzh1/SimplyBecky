@@ -51,6 +51,7 @@
 
       <hr />
       <% @posts = Post.all %>
+      <% @posts = @posts.order('updated_at DESC') %>
       <% @posts.each do |post| %>
         <div class="col-md-4">
 
