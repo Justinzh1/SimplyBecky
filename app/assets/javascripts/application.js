@@ -201,24 +201,47 @@
   })($, window);
 
   // Init plugin
-  // $('canvas').constellation({
-  // 	star: {
-  // 		width: 3
-  // 	},
-  // 	line: {
-  // 		color: 'rgba(255, 255, 255, .8)'
-  // 	},
-  // 	radius: 250
-  // });
+
+  $('canvas').constellation({
+  	star: {
+  		width: 3
+  	},
+  	line: {
+  		color: 'rgba(255, 255, 255, .8)'
+  	},
+  	radius: 250
+  });
 
   $("#chevron").click(function(){
     $("#about").animatescroll();
   });
 
+
+  $("#info").click(function(){
+    $("#about").animatescroll();
+  });
+
+
   $("#chevron1").click(function(){
     $("#posts").animatescroll();
   });
 
+  $("#blog").click(function(){
+    $("#posts").animatescroll();
+  });
 
+  var original = $(".col-md-4").css("width");
+  var parent = $(".container").css("width");
+
+  $(".col-md-4").on({
+    mouseenter: function(){
+      $(this).find(".content").css("display","none");
+      $(this).find(".popup").css("display", "relative");
+      console.log("mouseover" + original);
+    },
+    mouseleave: function(){
+      console.log("mousseleave");
+    }
+  });
 
 });

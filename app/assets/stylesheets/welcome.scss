@@ -31,7 +31,7 @@ h1  {
 }
 
 .hvr-underline-from-center:before  {
-  background:#FFF;
+  background:rgba(255, 179, 158,1);
 }
 
 .navbar-brand  {
@@ -73,16 +73,19 @@ h1  {
   background-size: cover;
 
   h1  {
+    font-family:"Oleo Script";
     margin-top: 15vh;
+    color: rgba(255, 179, 158, 0.9);
     font-weight:bold;
     font-size:10vw;
-    text-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+    text-shadow: 6px 6px 0px rgba(89, 4, 36, 1);
   }
 
   h2  {
     font-family: $oleo;
     font-size:3vw;
-    text-shadow: 4px 4px 0px rgba(0.2,0,0,0.1);
+    color: rgba(60, 60, 60, 0.9);
+    text-shadow: 3px 3px 0px rgba(255, 255, 255, 0.6);
   }
 
 }
@@ -117,7 +120,8 @@ h1  {
   }
 
   .container  {
-    text-indent: 5vw;
+    width:60%;
+    text-indent: 2.2vw;
     text-align:center;
     font-size:2vh;
     padding-bottom:5vh;
@@ -125,6 +129,11 @@ h1  {
     p  {
       margin-bottom:0.8vh;
     }
+
+    .bio  {
+      text-align: left;
+    }
+
   }
 
   h1  {
@@ -167,9 +176,46 @@ h1  {
     font-size:2vh;
     padding-bottom:5vh;
 
-    p  {
-      margin-bottom:0.8vh;
+    h2 {
+    font-family:$lato;
+    margin-bottom:2vh;
+    font-weight:400;
+    font-size:1.2vw;
+    } 
+
+    .col-md-4 {
+      padding:1vw;
+      border-radius:3%;
+
+      .jumbotron  {
+        margin-bottom:0;
+
+        h2  {
+          font-size:1.4vw;
+          margin-bottom: 0.3vh;
+        
+        }
+
+        h5  {
+          font-family:$lato;
+          font-weight: 300;
+          margin-bottom: 0.3vh;
+        }
+
+        p  {
+          font-size:1.3vw;
+        }
+      }
     }
+
+    .col-md-4:hover{
+
+      .jumbotron  {
+        background-color:  rgba(255, 179, 158, 0.6); 
+      }
+
+    }
+
   }
 
   h1  {
@@ -185,14 +231,12 @@ h1  {
 }
 
 
+.popup  {
+  display:none;
+}
 
 
-
-
-
-
-
-
+/**imported css**/
 
 
 .hovicon.effect-1 {

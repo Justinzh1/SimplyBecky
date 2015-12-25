@@ -14,8 +14,8 @@
           </div>
 
           <div class="nav navbar-nav navbar-right">
-            <li><%= link_to("blog", "#", class: "hvr-underline-from-center")%></li>
-            <li><%= link_to("about", "#", class: "hvr-underline-from-center")%></li>
+            <li><%= link_to("blog", "#", id: "blog", class: "hvr-underline-from-center")%></li>
+            <li><%= link_to("about", "#", id: "info", class: "hvr-underline-from-center")%></li>
             <li><%= link_to("login", "#", class: "hvr-underline-from-center")%></li>
           </div>
 
@@ -35,7 +35,9 @@
       <h1>What is up? <small>my chanclas</small></h1>
       <div id="picture" class="hovicon effect-1 sub-a effect-4 sub-b"></div>
       <div class="container">
-        <p>Hello there! My name’s Rebecca and I’m currently an undergrad student at UC Berkeley. College is such a new and crazy time of my life, and I want to document everything about it. Even though school is pretty tough, a little fun here and there doesn’t hurt! Work hard play hard! From weird happenings around Berkeley to my next rave adventure, I want to take you with me! Happy reading!</p>
+        <div class="bio">
+          <p>Hello there! My name’s Rebecca and I’m currently an undergrad student at UC Berkeley. College is such a new and crazy time of my life, and I want to document everything about it. Even though school is pretty tough, a little fun here and there doesn’t hurt! Work hard play hard! From weird happenings around Berkeley to my next rave adventure, I want to take you with me! Happy reading!</p>
+        </div>
         <span id="chevron1" class="fa fa-chevron-down hvr-icon-hang"</span>
       </div>
     </div>
@@ -50,15 +52,31 @@
       <hr />
       <% @posts = Post.all %>
       <% @posts.each do |post| %>
-        <h2><%= link_to post.title, post %></h1>
+        <div class="col-md-4">
+          
+          <div class="jumbotron">
+            
+            <h2><%= post.title %></h2>
+            <h5><%= time_ago_in_words post.published_at %> ago</h5>
+            
+            <div class="content">
+              <%= markdown(post.body[0..70] + "...")%> 
+            </div>
 
-        <p><%= markdown(post.body) %></p>
-        <h5>Published <%= time_ago_in_words post.published_at %> ago</h5>
-        <% if post != @posts.last %>
-        <hr />
+            <div id="popup" class="popup well">
+              <%= markdown(post.body) %>
+            </div>
+
+            <% if post != @posts.last %>
+            <hr />
+            <% end %>
+
+          </div>
+
+        </div>
+
       <% end %>
-
-<% end %>
+      
 
     </div>
   </div>
