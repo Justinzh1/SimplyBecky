@@ -25,6 +25,11 @@ h1  {
   }
 }
 
+.fa-chevron-down {
+  font-size:3vw;
+  padding-left: 3vw;
+}
+
 .hvr-underline-from-center:before  {
   background:#FFF;
 }
@@ -83,18 +88,10 @@ h1  {
 }
 
 .title  {
+  text-align:center;
   width:100%;
   margin: 0 auto;
   position:absolute;
-
-  #chev  {
-    width:100vw;
-    display:flex;
-    margin-top:2vh;
-    justify-content: center;
-    align-items: center;
-    font-size:5vw;
-  }
 
   a {
     color:rgba(0,0,0,0.7);
@@ -110,6 +107,7 @@ h1  {
 .about  {
   width: 100vw;
   text-align:center;
+  justify-content: center;
   background: image-url("symphony.png");
   padding-top:5vh;
 
@@ -120,7 +118,7 @@ h1  {
 
   .container  {
     text-indent: 5vw;
-    text-align:left;
+    text-align:center;
     font-size:2vh;
     padding-bottom:5vh;
 
@@ -148,7 +146,7 @@ h1  {
   height:15vw;
   border-radius:100%;
   background: image-url("Becky.jpg");
-  background-size:auto 20vh;
+  background-size:auto 120%;
   background-position:center;
 }
 
@@ -156,7 +154,7 @@ h1  {
   width: 100vw;
   height: 100vh;
   padding-top:5vh;
-  background: image-url("pink_rice.png");
+  background: #fff;
 
   .page-header  {
     text-align:center;
@@ -204,9 +202,9 @@ h1  {
    transition: background 0.2s, color 0.2s;
 }
 .hovicon.effect-1:after {
-   top: -7px;
-   left: -7px;
-   padding: 7px;
+   top: -8px;
+   left: -8px;
+   padding: 0px;
    box-shadow: 0 0 0 4px #FFB39E;
    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
    -webkit-transform: scale(.8);

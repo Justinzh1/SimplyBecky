@@ -212,9 +212,13 @@
   // });
 
   $("#chevron").click(function(){
-    console.log("clicked");
     $("#about").animatescroll();
   });
+
+  $("#chevron1").click(function(){
+    $("#posts").animatescroll();
+  });
+
 
 
 });

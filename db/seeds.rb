@@ -33,3 +33,31 @@ Post.create(
   * write even more posts
   * write even more posts!}
 )
+
+Post.create(
+  id: 3,
+  title: "My third Post",
+  published_at: Time.now,
+  body:
+  %Q{### My List of Things To Do!
+
+  Here is the list of things I wish to do!
+
+  * write more posts
+  * write even more posts
+  * write even more posts!}
+)
+
+Post.create(
+  id: 4,
+  title: "My fourth Post",
+  published_at: Time.now,
+  body:
+  %Q{### My List of Things To Do!
+
+  Here is the list of things I wish to do!
+
+  * write more posts
+  * write even more posts
+  * write even more posts!}
+)

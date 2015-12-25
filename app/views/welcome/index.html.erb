@@ -12,21 +12,20 @@
           <div class="navbar-header">
             <%= link_to("simplybecky", "#", class: "navbar-brand hvr-underline-from-center ")%>
           </div>
+
           <div class="nav navbar-nav navbar-right">
             <li><%= link_to("blog", "#", class: "hvr-underline-from-center")%></li>
             <li><%= link_to("about", "#", class: "hvr-underline-from-center")%></li>
             <li><%= link_to("login", "#", class: "hvr-underline-from-center")%></li>
-
-
           </div>
+
       </div>
     </div>
+
     <div class="title">
       <h1>SimplyBecky</h1>
       <h2>—my thoughts my blog—</h2>
-      <div id="chev">
-        <span id="chevron" class="fa fa-chevron-down hvr-icon-hang"></span>
-      </div>
+      <span id="chevron" class="fa fa-chevron-down hvr-icon-hang"></span>
     </div>
     <canvas></canvas>
   </div>
@@ -37,17 +36,30 @@
       <div id="picture" class="hovicon effect-1 sub-a effect-4 sub-b"></div>
       <div class="container">
         <p>Hello there! My name’s Rebecca and I’m currently an undergrad student at UC Berkeley. College is such a new and crazy time of my life, and I want to document everything about it. Even though school is pretty tough, a little fun here and there doesn’t hurt! Work hard play hard! From weird happenings around Berkeley to my next rave adventure, I want to take you with me! Happy reading!</p>
+        <span id="chevron1" class="fa fa-chevron-down hvr-icon-hang"</span>
       </div>
     </div>
   </div>
 
-  <div class="posts">
+  <div id="posts" class="posts">
     <div class="page-header">
       <h1>My Posts</h1>
-      <div class="container">
+    </div>
+    <div class="container">
 
+      <hr />
+      <% @posts = Post.all %>
+      <% @posts.each do |post| %>
+        <h2><%= link_to post.title, post %></h1>
 
-      </div>
+        <p><%= markdown(post.body) %></p>
+        <h5>Published <%= time_ago_in_words post.published_at %> ago</h5>
+        <% if post != @posts.last %>
+        <hr />
+      <% end %>
+
+<% end %>
+
     </div>
   </div>
 
