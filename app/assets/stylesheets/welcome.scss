@@ -25,6 +25,10 @@ h1  {
   }
 }
 
+h2  {
+  font-family:$lato;
+}
+
 .fa-chevron-down {
   font-size:3vw;
   padding-left: 3vw;
@@ -115,6 +119,8 @@ h1  {
   background: image-url("symphony.png");
   padding-top:5vh;
 
+
+
   .page-header  {
     width: 100%;
     margin: 0 auto;
@@ -127,12 +133,37 @@ h1  {
     font-size:2vh;
     padding-bottom:5vh;
 
+    .row{
+      border-radius:10px;
+      color:rgba(50,50,50,0.9);
+      font-size:2em;
+      margin-bottom: 7%;
+      border-top-color:rgba(50,50,50,0.8);
+      border-bottom-color: rgba(50,50,50,0.8);
+      border-width:medium;
+
+      a {
+        color:rgba(50,50,50,1);
+      }
+
+      span{
+        vertical-align: middle;
+        margin-left:2%;
+        margin-right:2%;
+
+      }
+      span:hover{
+        color:rgba(255, 179, 158, 0.9);
+      }
+    }
+
     p  {
       margin-bottom:0.8vh;
     }
 
     .bio  {
       text-align: left;
+      margin-bottom:5%;
     }
 
   }
@@ -177,6 +208,23 @@ h1  {
     text-align:left;
     font-size:2vh;
     padding-bottom:5vh;
+
+    .new  {
+      text-align: left;
+      font-size:150%;
+      h2 {
+        font-size:150%;;
+        margin-bottom: 0;
+      }
+
+      h2:hover  {
+        color: rgba(100, 100, 100, 0.6)
+      }
+
+      .jumbotron{
+        margin-bottom: 0;
+      }
+    }
 
     h2 {
     font-family:$lato;
@@ -236,7 +284,6 @@ h1  {
 .popup  {
   display: none;
 }
-
 
 /**imported css**/
 
