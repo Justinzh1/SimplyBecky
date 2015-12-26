@@ -42,3 +42,84 @@ h1  {
     font-family:$body;
   }
 }
+
+.posts  {
+  width: 100vw;
+  height: 100vh;
+  padding-top:5vh;
+  background: #fff;
+
+  .page-header  {
+    text-align:center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .container  {
+    text-align:left;
+    font-size:2vh;
+    padding-bottom:5vh;
+
+    h2 {
+    font-family:$lato;
+    margin-bottom:2vh;
+    font-weight:400;
+    font-size:100%;
+    }
+
+    .col-md-4 {
+      padding:1vw;
+      border-radius:3%;
+
+      .jumbotron  {
+        margin-bottom:0;
+
+        h2  {
+          font-size:130%;
+          margin-bottom: 0.3vh;
+
+        }
+
+        h5  {
+          font-family:$lato;
+          font-weight: 300;
+          margin-top: 1%;
+          margin-bottom: 1%;
+        }
+
+        p  {
+          line-height: normal;
+          font-size:120%;
+          margin-bottom:0.5%;
+        }
+      }
+    }
+
+    .col-md-4:hover{
+
+      .jumbotron  {
+        background-color:  rgba(255, 179, 158, 0.6);
+      }
+
+    }
+
+  }
+}
+
+.new  {
+  width:100%;
+  text-align: left;
+  h2 {
+    font-size:160%;
+    margin-bottom: 0.3vh;
+
+  }
+}
+
+.new:hover{
+  color: rgba(255, 179, 158, 1)
+}
+
+.popup  {
+  display: none;
+}

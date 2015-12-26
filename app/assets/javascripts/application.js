@@ -234,7 +234,6 @@
   var parent = $(".container").css("width");
 
   $(".col-md-4").click(function(){
-
     $(".col-md-4").css("width", original);
     $(".col-md-4").fadeIn("medium", function(){
       $(".col-md-4").animate("width", original);
@@ -248,10 +247,6 @@
       $(this).animate("width", parent);
     });
     $(this).find(".popup").show("slow");
-
-
-
-
   });
 
 });

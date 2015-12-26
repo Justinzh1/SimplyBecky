@@ -1,12 +1,33 @@
 <h1>My Blog</h1>
 <hr />
-<% @posts.each do |post| %>
-  <h1><%= link_to post.title, post %></h1>
+<div class="posts">
+<div class="container">
+  <% @posts = Post.all %>
+  <% @posts = @posts.order('updated_at DESC') %>
+  <% @posts.each do |post| %>
+    <div class="col-md-4">
 
-  <p><%= markdown(post.body) %></p>
-  <h5>Published <%= time_ago_in_words post.published_at %> ago</h5>
-  <% if post != @posts.last %>
-  <hr />
+      <div class="jumbotron">
+
+        <h2><%= post.title %></h2>
+        <h5><%= time_ago_in_words post.published_at %> ago</h5>
+
+        <div class="content">
+          <%= markdown(post.body[0..70] + "...")%>
+        </div>
+
+        <div id="popup" class="popup">
+          <%= markdown(post.body) %>
+        </div>
+
+        <% if post != @posts.last %>
+        <hr />
+        <% end %>
+
+      </div>
+
+    </div>
+
   <% end %>
-
-<% end %>
+</div>
+</div>
