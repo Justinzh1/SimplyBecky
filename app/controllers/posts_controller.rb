@@ -9,6 +9,17 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new()
+    render 'posts/new'
+  end
+
+  def create
+    @post = Post.new
+    @post.title = params[:title]
+    @post.body = params[:body]
+    @post.cover = params[:cover]
+    @post.save
+
+    redirect_to :root
+
   end
 end
