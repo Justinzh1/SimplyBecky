@@ -244,8 +244,15 @@ h2  {
     }
 
     .col-md-4 {
-      padding:1vw;
+      padding:0.5vh;
+      padding-bottom:1vh;
       border-radius:3%;
+
+      .jumbotron  {
+        height:10em;
+        overflow: hidden;
+        padding-bottom: 1vh;
+        margin-bottom:0;
 
       .destroy{
         text-align: right;
@@ -258,10 +265,6 @@ h2  {
           text-decoration: none;
         }
       }
-
-
-      .jumbotron  {
-        margin-bottom:0;
 
         h2  {
           font-size:130%;

@@ -10,7 +10,7 @@ Post.delete_all
 
 
 User.create(
-  id:1,r
+  id:1,
   email: "rzhuge@berkeley.edu",
   password: 'zeddchainsmokers',
   password_confirmation: 'zeddchainsmokers',
