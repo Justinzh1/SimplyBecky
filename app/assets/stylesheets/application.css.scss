@@ -107,7 +107,37 @@ h1  {
 }
 
 
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+  background-color: #FFF;
+}
 
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    color: #FFF !important;
+}
+
+#inputId:-webkit-autofill {
+    background-color: white !important;
+}
+
+.form-control{
+  height:3em;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-width: medium;
+  border-color: rgba(50, 50, 50, 0.9);
+  background-color: #fff;
+  input {
+    background-color: #fff;
+  }
+}
+
+.form-control:focus{
+  box-shadow: none;
+  background-color: #fff;
+  border-color: rgba(255, 179, 158, 0.9);
+}
 
 
 

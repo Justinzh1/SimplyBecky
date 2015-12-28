@@ -13,13 +13,18 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new
-    @post.title = params[:title]
-    @post.body = params[:body]
-    @post.cover = params[:cover]
-    @post.save
+    @post = Post.new(posts_params)
 
-    redirect_to :root
-
+    if @post.save
+      redirect_to :posts, :notice => "Post was created successfully."
+    else
+      redirect_to new_post_path, alert: "Error creating post."
+    end
   end
+
+  private
+  def posts_params
+    params.require(:post).permit(:body, :title, :cover, :created_at)
+  end
+
 end

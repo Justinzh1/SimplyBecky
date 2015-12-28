@@ -202,15 +202,15 @@
 
   // Init plugin
 
-  $('canvas').constellation({
-  	star: {
-  		width: 3
-  	},
-  	line: {
-  		color: 'rgba(255, 255, 255, .8)'
-  	},
-  	radius: 250
-  });
+  // $('canvas').constellation({
+  // 	star: {
+  // 		width: 3
+  // 	},
+  // 	line: {
+  // 		color: 'rgba(255, 255, 255, .8)'
+  // 	},
+  // 	radius: 250
+  // });
 
   $("#chevron").click(function(){
     $("#about").animatescroll();
