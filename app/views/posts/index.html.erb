@@ -17,40 +17,41 @@
 </div>
 
 </div>
+
 <div class="page-header">
   <h1>My Blog</h1>
 </div>
 
-
 <hr />
 <div class="posts">
-<div class="container">
-  <% @posts = Post.all %>
-  <% @posts = @posts.order('updated_at DESC') %>
-  <% @posts.each do |post| %>
-    <div class="col-md-4">
 
-      <div class="jumbotron">
+  <div class="container">
+    <% @posts = Post.all %>
+    <% @posts = @posts.order('updated_at DESC') %>
+    <% @posts.each do |post| %>
+      <div class="col-md-4">
 
-        <h2><%= post.title %></h2>
-        <h5><%= time_ago_in_words post.updated_at %> ago</h5>
+        <div class="jumbotron">
 
-        <div class="content">
-          <%= markdown(post.body[0..70] + "...")%>
+          <h2><%= post.title %></h2>
+          <h5><%= time_ago_in_words post.updated_at %> ago</h5>
+
+          <div class="content">
+            <%= markdown(post.body[0..70] + "...")%>
+          </div>
+
+          <div id="popup" class="popup">
+            <%= markdown(post.body) %>
+          </div>
+
+          <% if post != @posts.last %>
+          <hr />
+          <% end %>
+
         </div>
-
-        <div id="popup" class="popup">
-          <%= markdown(post.body) %>
-        </div>
-
-        <% if post != @posts.last %>
-        <hr />
-        <% end %>
 
       </div>
 
-    </div>
-
-  <% end %>
-</div>
+    <% end %>
+  </div>
 </div>

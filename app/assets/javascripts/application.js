@@ -202,15 +202,15 @@
 
   // Init plugin
 
-  // $('canvas').constellation({
-  // 	star: {
-  // 		width: 3
-  // 	},
-  // 	line: {
-  // 		color: 'rgba(255, 255, 255, .8)'
-  // 	},
-  // 	radius: 250
-  // });
+  $('canvas').constellation({
+  	star: {
+  		width: 3
+  	},
+  	line: {
+  		color: 'rgba(255, 255, 255, .8)'
+  	},
+  	radius: 250
+  });
 
   $("#chevron").click(function(){
     $("#about").animatescroll();
@@ -235,6 +235,8 @@
 
   $(".col-md-4").click(function(){
     $(".col-md-4").css("width", original);
+    $(".col-md-4").css("height","10em");
+    $(".col-md-4").find(".jumbotron").css("height", "10em");
     $(".col-md-4").fadeIn("medium", function(){
       $(".col-md-4").animate("width", original);
     });
@@ -243,8 +245,11 @@
 
     $(this).find(".content").hide();
     $(this).css("width", parent);
+    $(this).css("height", "auto");
+    $(this).find(".jumbotron").css("height", "auto");
     $(this).fadeIn("medium", function(){
       $(this).animate("width", parent);
+      
     });
     $(this).find(".popup").show("slow");
   });
