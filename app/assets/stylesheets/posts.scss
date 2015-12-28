@@ -10,6 +10,15 @@ body  {
   text-align: center;
 }
 
+.container-fluid{
+  a{
+    color: black;
+  }
+  a:hover{
+    color:rgba(50,50,50,0.8);
+  }
+}
+
 .container  {
   text-align: left;
 

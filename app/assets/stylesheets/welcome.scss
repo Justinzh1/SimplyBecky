@@ -20,6 +20,15 @@ h1  {
   font-weight:bold;
   font-size:5vw;
 
+  a{
+    color:rgba(20,20,20,1);
+    text-decoration: none;
+  }
+
+  a:hover{
+    color:rgba(50,50,50,0.9);
+    text-decoration: none;
+  }
   small {
     font-family:$body;
   }
@@ -212,6 +221,7 @@ h2  {
     .new  {
       text-align: left;
       font-size:150%;
+      font-family:'lato'
       h2 {
         font-size:150%;;
         margin-bottom: 0;
@@ -236,6 +246,19 @@ h2  {
     .col-md-4 {
       padding:1vw;
       border-radius:3%;
+
+      .destroy{
+        text-align: right;
+        text-decoration:none;
+        a{
+          color:rgba(50,50,50,0.8);
+        }
+        a:hover{
+          color:rgba(80,80,80,0.8);
+          text-decoration: none;
+        }
+      }
+
 
       .jumbotron  {
         margin-bottom:0;

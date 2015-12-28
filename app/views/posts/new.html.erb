@@ -1,3 +1,4 @@
+<% if current_user != nil and current_user.admin? %>
 <div class="jumbotron">
     <div class="container">
     <h2>New Post</h2>
@@ -16,3 +17,4 @@
     <% end %>
   </div>
 </div>
+<% end %>

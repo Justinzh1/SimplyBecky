@@ -8,6 +8,15 @@
 
 Post.delete_all
 
+
+User.create(
+  id:1,r
+  email: "rzhuge@berkeley.edu",
+  password: 'zeddchainsmokers',
+  password_confirmation: 'zeddchainsmokers',
+  admin: true
+)
+
 Post.create(
   id: 1,
   title: "My Very First Post",

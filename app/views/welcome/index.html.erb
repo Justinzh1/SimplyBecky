@@ -10,25 +10,19 @@
     <div class="container-fluid">
       <div class="navbar navbar-default">
           <div class="navbar-header">
-            <%= link_to("simplybecky", "#", class: "navbar-brand hvr-underline-from-center ")%>
+            <%= link_to("simplybecky", root_url, class: "navbar-brand hvr-underline-from-center ")%>
           </div>
 
           <div class="nav navbar-nav navbar-right">
             <li><%= link_to("blog", "#", id: "blog", class: "hvr-underline-from-center")%></li>
             <li><%= link_to("about", "#", id: "info", class: "hvr-underline-from-center")%></li>
             <% if user_signed_in? %>
-              <li>
-                Logged in as <strong><%= current_user.email %></strong>.
-                <%= link_to 'edit profile', edit_user_registration_path, :class => 'navbar-link hvr-underline-from-center' %>
-                <%= link_to "logout", destroy_user_session_path, method: :delete, :class => 'navbar-link hvr-underline-from-center'  %>
-              </li>
+              <li><a class="hvr-underline-from-center"><%= current_user.email %></a>></li>
+              <li><%= link_to 'edit profile', edit_user_registration_path, :class => 'navbar-link hvr-underline-from-center' %></li>
+              <li><%= link_to "logout", destroy_user_session_path, method: :delete, :class => 'navbar-link hvr-underline-from-center'  %></li>
             <% else %>
-              <li>
-                <%= link_to "sign up", new_user_registration_path, :class => 'navbar-link hvr-underline-from-center'  %>
-              </li>
-              <li>
-                <%= link_to "login", new_user_session_path, :class => 'navbar-link hvr-underline-from-center'  %>
-              </li>
+              <li><%= link_to "sign up", new_user_registration_path, :class => 'navbar-link hvr-underline-from-center'  %></li>
+              <li><%= link_to "login", new_user_session_path, :class => 'navbar-link hvr-underline-from-center'  %></li>
             <% end %>
           </div>
 
@@ -69,15 +63,16 @@
 
   <div id="posts" class="posts">
     <div class="page-header">
-      <h1>My Posts</h1>
+      <h1><%= link_to("My Posts", posts_url, id: "blog", class: "hvr-underline-from-center") %></h1>
     </div>
     <div class="container">
-
+      <% if current_user != nil and current_user.admin? %>
       <div class="new">
         <div class="jumbotron">
           <%= link_to "New Post", new_post_path, class: "button btn btn-default"%>
         </div>
       </div>
+      <% end %>
 
       <hr />
       <% @posts = Post.all %>
@@ -86,7 +81,6 @@
         <div class="col-md-4">
 
           <div class="jumbotron">
-
             <h2><%= post.title %></h2>
             <h5><%= time_ago_in_words post.updated_at %> ago</h5>
 
