@@ -31,6 +31,10 @@ $header-font: 20px;
 body {
   color:#002e3e;
   font-family:'Fira Sans', sans-serif;
+
+  p{
+    margin-bottom: 0;
+  }
 }
 
 h1  {
@@ -95,6 +99,10 @@ h1  {
 
         }
 
+        h3  {
+          margin-bottom: 0.2vh;
+        }
+
         h5  {
           font-family:$lato;
           font-weight: 300;
@@ -103,9 +111,9 @@ h1  {
         }
 
         p  {
+          margin-bottom: 0;
           line-height: normal;
           font-size:120%;
-          margin-bottom:0.5%;
         }
       }
     }
