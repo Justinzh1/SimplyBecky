@@ -35,12 +35,12 @@
         context = canvas.getContext('2d'),
         defaults = {
           star: {
-            color: 'rgba(255, 200, 200, .5)',
+            color: 'rgba(255, 255, 255, .5)',
             width: 1.5
           },
           line: {
-            color: 'rgba(255, 190, 190, .5)',
-            width: 0.5
+            color: 'rgba(255, 209, 193 0.8)',
+            width: 1
           },
           position: {
             x: 0, // This value will be overwritten at startup
@@ -208,7 +208,7 @@
   		width: 3
   	},
   	line: {
-  		color: 'rgba(255, 255, 255, .8)'
+  		color: 'rgba(255,209,193,0.8)'
   	},
   	radius: 250
   });
