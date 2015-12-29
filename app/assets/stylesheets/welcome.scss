@@ -15,6 +15,7 @@ $header-font: 20px;
 
 
 h1  {
+  color: #002e3e;
   font-family:$lato;
   margin-bottom:2.5vh;
   font-weight:bold;
@@ -39,6 +40,7 @@ h2  {
 }
 
 .fa-chevron-down {
+  color: #002e3e;
   margin-top: 2vh;
   font-size:8vw;
   padding-left: 5vw;
@@ -128,6 +130,7 @@ h2  {
 }
 
 .about  {
+  color: #002e3e;
   width: 100vw;
   height: 100vh;
   text-align:center;
@@ -159,6 +162,7 @@ h2  {
     padding-bottom:5vh;
 
     .row{
+      color: #002e3e;
       border-radius:10px;
       color:rgba(50,50,50,0.9);
       font-size:4vw;
@@ -168,7 +172,7 @@ h2  {
       border-width:medium;
 
       a {
-        color:rgba(50,50,50,1);
+        color:#002e3e;
       }
 
       span{
@@ -218,10 +222,16 @@ h2  {
 }
 
 .posts  {
+  color: #002e3e;
   width: 100vw;
   height: 100vh;
   padding-top:5vh;
   background: #fff;
+
+  a{
+    margin-bottom:0.5vh;
+    color: #002e3e;
+  }
 
   .page-header  {
     text-align:center;
@@ -229,22 +239,32 @@ h2  {
     margin: 0 auto;
   }
 
+  .hvr-underline-from-center:before  {
+      background:#002e3e;
+  }
+
+  h2{
+    padding-bottom: 0.5vh;
+  }
+
   .container  {
     text-align:left;
     font-size:2vh;
     padding-bottom:5vh;
+
+    a{
+      padding-bottom:0.5vh;
+      text-decoration: none;
+    }
 
     .new  {
       text-align: left;
       font-size:150%;
       font-family:'lato'
       h2 {
+        color:#002e3e;
         font-size:150%;;
         margin-bottom: 0;
-      }
-
-      h2:hover  {
-        color: rgba(100, 100, 100, 0.6)
       }
 
       .jumbotron{

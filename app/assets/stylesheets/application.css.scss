@@ -69,6 +69,14 @@ h1  {
     font-size:100%;
     }
 
+    a{
+      text-decoration: none;
+    }
+
+    .hvr-underline-from-center:before  {
+      background:#002e3e;
+    }
+
     .col-md-4 {
       padding:0.5vh;
       padding-bottom:1vh;
