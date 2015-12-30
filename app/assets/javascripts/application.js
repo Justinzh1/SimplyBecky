@@ -233,17 +233,18 @@
 
   var original = $(".col-md-4").css("width");
   var parent = $(".container").css("width");
+  var columns = $(".col-md-4");
 
-  $(".col-md-4").click(function(){
-    $(".col-md-4").css("width", original);
-    $(".col-md-4").css("height","10em");
-    $(".col-md-4").find(".jumbotron").css("height", "10em");
-    $(".col-md-4").fadeIn("medium", function(){
-      $(".col-md-4").animate("width", original);
-      $(".col-md-4").animate("height","10em");
+  columns.click(function(){
+    columns.css("width", original);
+    columns.css("height","10em");
+    columns.find(".jumbotron").css("height", "10em");
+    columns.fadeIn("medium", function(){
+      columns.animate("width", original);
+      columns.animate("height","10em");
     });
-    $(".col-md-4").find(".popup").hide();
-    $(".col-md-4").find(".content").show("fast");
+    columns.find(".popup").hide();
+    columns.find(".content").show("fast");
 
     $(this).find(".content").hide();
     $(this).css("width", parent);
