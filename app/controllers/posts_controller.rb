@@ -12,6 +12,10 @@ class PostsController < ApplicationController
     render 'posts/new'
   end
 
+  def tag_cloud
+    @tags = Post.tag_counts_on(:tags)
+  end
+
   def create
     @post = Post.new(posts_params)
 
@@ -33,7 +37,7 @@ class PostsController < ApplicationController
 
   private
   def posts_params
-    params.require(:post).permit(:body, :title, :cover, :created_at)
+    params.require(:post).permit(:body, :title, :cover, :created_at, :tag_list)
   end
 
 end

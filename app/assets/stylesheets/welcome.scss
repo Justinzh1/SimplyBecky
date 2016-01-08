@@ -229,6 +229,7 @@ h2  {
 }
 
 .posts  {
+  font-family:'Fira Sans', sans-serif;
   color: #002e3e;
   width: 100vw;
   height: 100vh;
@@ -256,9 +257,15 @@ h2  {
   }
 
   .container  {
+    margin: 0 auto;
     text-align:left;
     font-size:2vh;
     padding-bottom:5vh;
+
+    #blog{
+      margin:0 auto;
+      height:100%;;
+    }
 
     a{
       padding-bottom:0.5vh;
@@ -268,14 +275,10 @@ h2  {
     .new  {
       text-align: left;
       font-size:150%;
-      font-family:'lato'
+      font-family:'lato';
       h2 {
         color:#002e3e;
         font-size:150%;;
-        margin-bottom: 0;
-      }
-
-      .jumbotron{
         margin-bottom: 0;
       }
     }
@@ -286,45 +289,41 @@ h2  {
     font-weight:400;
     font-size:1.2vw;
     }
-
     .col-md-4 {
-      padding:0.5vh;
-      padding-bottom:1vh;
-      border-radius:3%;
+      background-color: rgba(200,200,200,0.2);
+      padding:2em;
+      margin-top:0.5em;
+      margin-left:auto;
+      margin-right:auto;
+      margin-bottom:2em;
+      border-radius:0.5em;
+      height:auto;
+      overflow:hidden;
 
-      .jumbotron  {
-        height:10em;
-        overflow: hidden;
-        padding-bottom: 1vh;
-        margin-bottom:0;
-
-      .destroy{
-        text-align: right;
-        text-decoration:none;
-        a{
-          color:rgba(50,50,50,0.8);
-        }
-        a:hover{
-          text-decoration: none;
-        }
+      .tag{
+        width:100%;
       }
 
-        h2  {
-          font-size:130%;
-          margin-bottom: 0.3vh;
+      h2  {
+        font-size:130%;
+        margin-bottom: 0.3vh;
+      }
 
-        }
+      h3  {
+        margin-bottom: 0.2vh;
+      }
 
-        h5  {
-          font-family:$lato;
-          font-weight: 300;
-          margin-top: 1%;
-          margin-bottom: 1%;
-        }
+      h5  {
+        font-family:$lato;
+        font-weight: 300;
+        margin-top: 0.3%;
+        margin-bottom: 0.8%;
+      }
 
-        p  {
-          font-size:120%;
-        }
+      p  {
+        margin-bottom: 0;
+        line-height: normal;
+        font-size:120%;
       }
     }
 
@@ -350,8 +349,8 @@ h2  {
   }
 }
 
-.popup  {
-  display: none;
+#popup  {
+  margin-top:1em;
 }
 
 /**imported css**/

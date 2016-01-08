@@ -6,15 +6,84 @@
       <div class="titleform">
         <%= f.text_field :title, hide_label: true, placeholder: "Title" %>
       </div>
+      <%= f.text_field :tag_list, hide_label: true, placeholder: "tags" %>
       <%= f.text_area :body, hide_label: true, placeholder: "Whats on your mind?" %>
-      <%= f.file_field :cover, hide_label: true%>
+      <!-- <%= f.file_field :cover, hide_label: true%>
       <div class="btn btn-default btn-file">
         Browse
-      </div>
-
+      </div> -->
       <%= f.submit "Post"%>
 
     <% end %>
   </div>
 </div>
+
+<div id="markup" class="jumbotron">
+  <div class="container">
+    <h3>Markup Guide</h3>
+    <p></p>
+    <div class="well">
+      <h4>Bold **</h4>
+      <p>wrap text with ** to create bold text</p>
+      <h4>Example</h4>
+        <p>**bold text** becomes <strong>bold text</strong></p>
+    </div>
+    <div class="well">
+      <h4>Italics *</h4>
+      <p>wrap text with * to create italic text</p>
+      <h4>Example</h4>
+        <p>*italic text* becomes <span style="font-style:italic">italic text</span></p>
+    </div>
+    <div class="well">
+      <h4>Links [title] (link)</h4>
+      <p>create links using [<small>title</small>](<small>link</small>)</p>
+      <h4>Example</h4>
+        <p>[google](http://google.com) becomes <a href="http://google.com">google</a></p>
+    </div>
+    <div class="well">
+      <h4>Lists *</h4>
+      <p>Create lists using * </p>
+      <h4>Example</h4>
+        <p> * item 1</p>
+        <p> * item 2</p>
+        <p> * item 3</p>
+        <p> becomes </p>
+        <ul>
+          <li> item 1 </li>
+          <li> item 2 </li>
+          <li> item 3 </li>
+        </ul>
+        <break>
+        <p>note the space between the * and the word</p>
+    </div>
+    <div class="well">
+      <h4>Lists </h4>
+      <p>Create lists using numbers </p>
+      <h4>Example</h4>
+        <p>1. item 1</p>
+        <p>2. item 2</p>
+        <p>3. item 3</p>
+        <p> becomes </p>
+        <ol>
+          <li> item 1 </li>
+          <li> item 2 </li>
+          <li> item 3 </li>
+        </ol>
+        <break>
+        <p>note the space between the 1. and the word</p>
+    </div>
+    <div class="well">
+      <h4>Quotes ></h4>
+      <p>create block quotes by prepending > to the sentence</p>
+      <h4>Example</h4>
+      <p> > One thing was certain, that the white kitten had had nothing </p>
+      <p> > to do with it -- it was the black kitten's fault entirely. For</p>
+      <p> > the white kitten had been having its face washed by the old cat,</p>
+      <p> > for the last quarter of an hour (and bearing it pretty well,</p>
+      <p> > considering) so you see that it couldn't have had any hand in</p>
+    </div>
+
+  </div>
+</div>
+
 <% end %>

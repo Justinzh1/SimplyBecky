@@ -200,7 +200,7 @@
 
 
  $(document).ready(function(){
-  
+
   // Init plugin
 
   $('canvas').constellation({
@@ -236,25 +236,7 @@
   var columns = $(".col-md-4");
 
   columns.click(function(){
-    columns.css("width", original);
-    columns.css("height","10em");
-    columns.find(".jumbotron").css("height", "10em");
-    columns.fadeIn("medium", function(){
-      columns.animate("width", original);
-      columns.animate("height","10em");
-    });
-    columns.find(".popup").hide();
-    columns.find(".content").show("fast");
-
-    $(this).find(".content").hide();
-    $(this).css("width", parent);
-    $(this).css("height", "auto");
-    $(this).find(".jumbotron").css("height", "auto");
-    $(this).fadeIn("medium", function(){
-      $(this).animate("width", parent);
-      $(this).animate("height", "auto");
-    });
-    $(this).find(".popup").show("slow");
+    $(this).find("#popup").toggle("medium");
   });
 
 });

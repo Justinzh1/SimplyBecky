@@ -1,10 +1,11 @@
 <head>
   <%= stylesheet_link_tag "welcome", :media => "all" %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
 </head>
 
 <body>
-
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'animatescroll', 'data-turbolinks-track' => true %>
   <a name="intro"></a>
   <div class="intro">
     <div class="container-fluid">
@@ -64,45 +65,44 @@
     <div class="page-header">
       <h1><%= link_to("My Posts", posts_url, id: "blog", class: "hvr-underline-from-center") %></h1>
     </div>
-    <div class="container">
+
       <% if current_user != nil and current_user.admin? %>
       <div class="new">
-        <div class="jumbotron">
-          <%= link_to "New Post", new_post_path, class: "button btn btn-default"%>
+        <div class="well">
+          <%= link_to "New Post", new_post_path, class: "button btn btn-default, style:", style: "margin:0 auto"%>
         </div>
       </div>
       <% end %>
 
       <hr />
-      <% @posts = Post.all %>
+      <div class="container">
+      <% @posts = Post.all.limit(10) %>
       <% @posts = @posts.order('updated_at DESC') %>
       <% @posts.each do |post| %>
         <div class="col-md-4">
-
-          <div class="jumbotron">
             <h2><%= link_to post.title, post, class:"hvr-underline-from-center" %></h2>
             <h5><%= time_ago_in_words post.updated_at %> ago</h5>
 
-            <div class="content">
-              <%= markdown(post.body[0..70] + "...")%>
+            <div class="row">
+              <div class="tag">
+                <% post.tag_list.each do |tag| %>
+                  <h4><span class="tag"><%= "#" + tag%></span></h4>
+                <% end %>
+              </div>
             </div>
 
-            <div id="popup" class="popup">
+            <div id="popup" style="display:none" class="popup">
               <%= markdown(post.body) %>
             </div>
 
             <% if post != @posts.last %>
             <hr />
             <% end %>
-
-          </div>
-
         </div>
-
       <% end %>
-
+    </div>
 
     </div>
-  </div>
+
 
 </body>

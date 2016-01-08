@@ -4,8 +4,8 @@
   <title>SimplyBecky</title>
   <%= stylesheet_link_tag    'hover-min', media: "all", 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
- 
-  <%= javascript_include_tag 'animatescroll', 'data-turbolinks-track' => true %>
+
+
   <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,700,900' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,100,100italic,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -16,12 +16,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
   <% if notice %>
-    <p class="alert alert-success"><%= notice %></p>
+    <h4 class="alert alert-success"><%= notice %></h4>
   <% end %>
   <% if alert %>
-    <p class="alert alert-danger"><%= alert %></p>
+    <h4 class="alert alert-danger"><%= alert %></h4>
   <% end %>
 
   <%= yield %>
