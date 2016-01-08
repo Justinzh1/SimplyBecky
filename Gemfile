@@ -16,7 +16,6 @@ gem 'font-awesome-sass'
 gem "paperclip", "~> 4.3"
 gem 'devise'
 gem 'acts-as-taggable-on', '~> 3.4'
-gem 'searchkick'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
