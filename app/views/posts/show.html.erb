@@ -1,6 +1,34 @@
-<div class="jumbotron">
+<div class=container-fluid>
+  <div class="navbar-header">
+    <%= link_to("simplybecky", root_url, class: "navbar-brand hvr-underline-from-center ")%>
+  </div>
+
+  <div class="nav navbar-nav navbar-right">
+    <li><%= link_to("blog", posts_url, id: "blog", class: "hvr-underline-from-center")%></li>
+    <li><%= link_to("about", root_url, id: "info", class: "hvr-underline-from-center")%></li>
+    <% if user_signed_in? %>
+      <li><a class="hvr-underline-from-center"><%= current_user.email %></a></li>
+      <li><%= link_to 'edit profile', edit_user_registration_path, :class => 'navbar-link hvr-underline-from-center' %></li>
+      <li><%= link_to "logout", destroy_user_session_path, method: :delete, :class => 'navbar-link hvr-underline-from-center'  %></li>
+    <% else %>
+      <li><%= link_to "sign up", new_user_registration_path, :class => 'navbar-link hvr-underline-from-center'  %></li>
+      <li><%= link_to "login", new_user_session_path, :class => 'navbar-link hvr-underline-from-center'  %></li>
+    <% end %>
+  </div>
+
+</div>
+
+<div style="background-color: rgba(200,200,200, 0.2)" class="jumbotron">
   <div class="container">
+    
     <h1><%= @post.title %></h1>
+      <div class="row">
+          <div class="tag">
+            <% @post.tag_list.each do |tag| %>
+              <h4><span class="tag"><%= "#" + tag%></span></h4>
+            <% end %>
+          </div>
+        </div>
     <hr />
 
     <p>
@@ -8,10 +36,16 @@
     </p>
     <h4>Published <%= time_ago_in_words @post.updated_at %> ago</h4>
     <%= link_to "Back to Index", posts_path %>
+  </div>
+
+  <div class="well">
+    <div class="container">
     <% if current_user != nil and current_user.admin? %>
       <div class="destroy">
         <%= link_to "Delete", @post, method: :delete, class: "btn btn-danger", data: { confirm: "You sure?" } %>
       </div>
     <% end %>
+    </div>
   </div>
+
 </div>
