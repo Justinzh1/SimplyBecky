@@ -6,6 +6,4 @@ class Post < ActiveRecord::Base
   validates :body , presence: true
   acts_as_taggable
   searchkick
-  include Elasticsearch::Model
-  include Elasticsearch::Model::Callbacks
 end
