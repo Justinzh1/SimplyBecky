@@ -16,6 +16,9 @@ gem 'font-awesome-sass'
 gem "paperclip", "~> 4.3"
 gem 'devise'
 gem 'acts-as-taggable-on', '~> 3.4'
+gem 'searchkick'
+gem 'elasticsearch-rails'
+gem 'elasticsearch-model'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
