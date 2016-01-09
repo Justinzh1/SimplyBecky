@@ -12,6 +12,20 @@ class PostsController < ApplicationController
     render 'posts/new'
   end
 
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:id])
+
+    if @post.update(posts_params)
+      redirect_to @post
+    else
+      render 'edit'
+    end
+  end
+
   def tag_cloud
     @tags = Post.tag_counts_on(:tags)
   end

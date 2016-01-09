@@ -22,7 +22,7 @@
 </div>
 
 <div class="page-header">
-  <h1 style="color:#002e3e">My Blog</h1>
+  <h1 style="color:#002e3e">Posts</h1>
 </div>
 
 <hr />
@@ -48,7 +48,7 @@
               <h2><%= link_to post.title, post, class: "hvr-underline-from-center" %></h2>
               <h5><%= time_ago_in_words post.updated_at %> ago</h5>
 
-              <div class="row">
+              <div class="">
                 <div class="tag">
                   <% post.tag_list.each do |tag| %>
                     <h4><span class="tag"><%= "#" + tag%></span></h4>

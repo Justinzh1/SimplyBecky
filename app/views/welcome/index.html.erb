@@ -15,7 +15,7 @@
           </div>
 
           <div class="nav navbar-nav navbar-right">
-            <li><%= link_to("blog", "#", id: "blog", class: "hvr-underline-from-center")%></li>
+            <li><%= link_to("blog", posts_url, class: "hvr-underline-from-center")%></li>
             <li><%= link_to("about", "#", id: "info", class: "hvr-underline-from-center")%></li>
             <% if user_signed_in? %>
               <li><a class="hvr-underline-from-center"><%= current_user.email %></a></li>

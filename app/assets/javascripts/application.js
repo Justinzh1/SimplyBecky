@@ -198,7 +198,6 @@
     };
   })($, window);
 
-
  $(document).ready(function(){
 
   // Init plugin
