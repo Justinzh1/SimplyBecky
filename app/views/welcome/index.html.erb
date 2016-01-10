@@ -83,13 +83,13 @@
             <h2><%= link_to post.title, post, class:"hvr-underline-from-center" %></h2>
             <h5><%= time_ago_in_words post.updated_at %> ago</h5>
 
-            <div class="row">
+
               <div class="tag">
                 <% post.tag_list.each do |tag| %>
                   <h4><span class="tag"><%= "#" + tag%></span></h4>
                 <% end %>
               </div>
-            </div>
+
 
             <div id="popup" style="display:none" class="popup">
               <%= markdown(post.body) %>
