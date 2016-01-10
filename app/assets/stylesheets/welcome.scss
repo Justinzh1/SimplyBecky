@@ -42,9 +42,10 @@ h2  {
 
 .fa-chevron-down {
   color: #002e3e;
-  margin-top: 2vh;
+  margin-top: 0.1em;
   font-size:8vw;
   padding-left: 5vw;
+  margin-bottom:0.5em;
 }
 
 .hvr-underline-from-center:before  {
@@ -135,17 +136,17 @@ h2  {
 .about  {
   color: #002e3e;
   width: 100vw;
-  height: 110vh;
+  min-height: 100vh;
+  height:auto;
   text-align:center;
   justify-content: center;
   background: image-url("symphony.png");
 
   .page-header  {
-    z-index: 5;
     width: 100%;
     margin: 0 auto;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
+    padding-top: 3em;
+    padding-bottom: 2em;
     margin-bottom: 3vh;
     background-color: #002e3e;
 
@@ -244,8 +245,8 @@ h2  {
     padding-top:0;
     width: 100%;
     margin: 0 auto;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
+    padding-top: 3em;
+    padding-bottom: 2em;
     margin-bottom: 3vh;
     background-color: #002e3e;
     color:#e0e0e0;
