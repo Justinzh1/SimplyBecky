@@ -103,13 +103,13 @@ h2  {
     margin-top: 15vh;
     color: #002e3e;
     font-weight:bold;
-    font-size:10vw;
+    font-size:130px;
     text-shadow: 0.5vw 0.5vw 0px #e0e0e0;
   }
 
   h2  {
     font-family: "Rogue Script", cursive;
-    font-size:3vw;
+    font-size:30px;
     color: #002e3e;
   }
 
@@ -150,6 +150,7 @@ h2  {
     background-color: #002e3e;
 
     h1{
+      font-size:60px;
       color: #e0e0e0;
       small{
         color:#ffd1c1;
@@ -190,7 +191,8 @@ h2  {
     }
 
     p  {
-      font-size:1.2em;
+      font-size:25px;
+      font-weight:400;
       margin-bottom:0.8vh;
     }
 
@@ -230,12 +232,36 @@ h2  {
 }
 
 .posts  {
+  padding-top:0;
   font-family:'Fira Sans', sans-serif;
   color: #002e3e;
   width: 100vw;
   height: 100vh;
-  padding-top:5vh;
   background: #fff;
+
+  .page-header  {
+    margin-bottom:10px;
+    padding-top:0;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    margin-bottom: 3vh;
+    background-color: #002e3e;
+    color:#e0e0e0;
+
+    h1{
+      font-size:60px;
+    }
+
+    a{
+      color:#e0e0e0;;
+    }
+    a:hover{
+      color:#e0e0e0;;
+    }
+
+  }
 
   a{
     margin-bottom:0.5vh;
@@ -254,10 +280,13 @@ h2  {
   }
 
   .hvr-underline-from-center:before  {
-      background:#002e3e;
+      margin-top:15%;
+      height:10%;
+      background:rgba(255, 179, 158, 0.9);
   }
 
   .container  {
+    padding-top:5vh;
     margin: 0 auto;
     text-align:left;
     font-size:2vh;
